@@ -97,9 +97,21 @@ class ModelCatalogCategoryTest extends TestCase {
      * @todo   Implement testGetCategories().
      */
     public function testGetCategories() {
-        $category_id = 0;
-        $categories = $this->object->getCategories($category_id);
+        $parent_id = 0;
+        $categories = $this->object->getCategories($parent_id);
         $this->assertCount(8, $categories);
+    }
+
+    
+    /**
+     * @covers ModelCatalogCategory::getCategoryDescriptions
+     * @todo   Implement testGetCategoryDescriptions().
+     */
+    public function testGetCategoryLayoutId() {
+        // Remove the following lines when you implement this test.
+        $category_id = 25;
+        $category_layoutId = $this->object->getCategoryLayoutId($category_id);
+        $this->assertNotEquals(0,$category_layoutId);
     }
 
     /**
