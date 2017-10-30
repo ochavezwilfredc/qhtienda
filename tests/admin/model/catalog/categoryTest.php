@@ -39,6 +39,11 @@ class ModelCatalogCategoryTest extends TestCase {
         $data = [
             "image" => "/api/image/catalog/table.jpg",
             "parent_id" => "25",
+            "category_description" => "something",
+            "category_filter" => "something",
+            "category_store" => "something",
+            "category_seo_url" => "something",
+            "category_layout" => "something",
             "top" => "1",
             "column" => "1",
             "sort_order" => "3",
@@ -59,6 +64,11 @@ class ModelCatalogCategoryTest extends TestCase {
         $category_id = 25;
         $data = [
             "image" => "/api/image/catalog/table.jpg",
+            "category_description" => "something",
+            "category_filter" => "something",
+            "category_store" => "something",
+            "category_seo_url" => "something",
+            "category_layout" => "something",
             "parent_id" => "25",
             "top" => "0",
             "column" => "1",
@@ -102,7 +112,6 @@ class ModelCatalogCategoryTest extends TestCase {
         $this->assertCount(8, $categories);
     }
 
-    
     /**
      * @covers ModelCatalogCategory::getCategoryDescriptions
      * @todo   Implement testGetCategoryDescriptions().
@@ -111,7 +120,7 @@ class ModelCatalogCategoryTest extends TestCase {
         // Remove the following lines when you implement this test.
         $category_id = 25;
         $category_layoutId = $this->object->getCategoryLayoutId($category_id);
-        $this->assertNotEquals(0,$category_layoutId);
+        $this->assertNotEquals(0, $category_layoutId);
     }
 
     /**
