@@ -1,4 +1,5 @@
 <?php
+//require __DIR__ . "/../../../system/engine/model.php";
 class ModelCatalogOption extends Model {
 	public function addOption($data) {
 		$this->db->query("INSERT INTO `" . DB_PREFIX . "option` SET type = '" . $this->db->escape($data['type']) . "', sort_order = '" . (int)$data['sort_order'] . "'");

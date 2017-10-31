@@ -49,143 +49,23 @@ class ModelCatalogCategoryTest extends TestCase {
             "sort_order" => "3",
             "status" => "1",
             "date_added" => "2017-10-29 10:16:14",
-            "date_modified" => "2017-10-30 09:10:10",
+            "date_modified" => "2017-10-30 09:10:10"
         ];
         $idresult = $this->object->addCategory($data);
         $this->assertNotNull($this->$idresult);
     }
 
-    /**
-     * @covers ModelCatalogCategory::editCategory
-     * @todo   Implement testEditCategory().
-     */
-    public function testEditCategory() {
-        // Remove the following lines when you implement this test.
-        $category_id = 25;
-        $data = [
-            "image" => "/api/image/catalog/table.jpg",
-            "category_description" => "something",
-            "category_filter" => "something",
-            "category_store" => "something",
-            "category_seo_url" => "something",
-            "category_layout" => "something",
-            "parent_id" => "25",
-            "top" => "0",
-            "column" => "1",
-            "sort_order" => "3",
-            "status" => "1",
-            "date_added" => "2017-10-29 10:16:14",
-            "date_modified" => "2017-10-30 09:10:10",
-        ];
-        $result = $this->object->editCategory($category_id, data);
-        $this->assertTrue($this->$result);
-    }
-
-    /**
-     * @covers ModelCatalogCategory::deleteCategory
-     * @todo   Implement testDeleteCategory().
-     */
-    public function testDeleteCategory() {
-        // Remove the following lines when you implement this test.
-        $category_id = 25;
-        $result = $this->object->deleteCategory($category_id);
-        $this->assertTrue($this->$result);
-    }
-
-    /**
-     * @covers ModelCatalogCategory::getCategory
-     * @todo   Implement testGetCategory().
-     */
-    public function testGetCategory() {
-        $category_id = 25;
-        $category = $this->object->getCategory($category_id);
-        $this->assertEquals($category['category_id'], 25);
-    }
-
+      
     /**
      * @covers ModelCatalogCategory::getCategories
      * @todo   Implement testGetCategories().
      */
     public function testGetCategories() {
-        $parent_id = 0;
-        $categories = $this->object->getCategories($parent_id);
+        $data = array();
+        $categories = $this->object->getCategories($data);
         $this->assertCount(8, $categories);
     }
 
-    /**
-     * @covers ModelCatalogCategory::getCategoryDescriptions
-     * @todo   Implement testGetCategoryDescriptions().
-     */
-    public function testGetCategoryLayoutId() {
-        // Remove the following lines when you implement this test.
-        $category_id = 25;
-        $category_layoutId = $this->object->getCategoryLayoutId($category_id);
-        $this->assertNotEquals(0, $category_layoutId);
-    }
-
-    /**
-     * @covers ModelCatalogCategory::getCategoryDescriptions
-     * @todo   Implement testGetCategoryDescriptions().
-     */
-    public function testGetCategoryDescriptions() {
-        // Remove the following lines when you implement this test.
-        $category_id = 25;
-        $category_description = $this->object->getCategoryDescriptions($category_id);
-        $this->assertNotEmpty($category_description);
-    }
-
-    /**
-     * @covers ModelCatalogCategory::getCategoryPath
-     * @todo   Implement testGetCategoryPath().
-     */
-    public function testGetCategoryPath() {
-        // Remove the following lines when you implement this test.
-        $category_id = 25;
-        $category_path = $this->object->getCategoryPath($category_id);
-        $this->assertNotNull($category_path);
-    }
-
-    /**
-     * @covers ModelCatalogCategory::getCategoryFilters
-     * @todo   Implement testGetCategoryFilters().
-     */
-    public function testGetCategoryFilters() {
-        // Remove the following lines when you implement this test.
-        $category_id = 25;
-        $category_filters = $this->object->getCategoryFilters($category_id);
-        $this->assertNotEmpty($category_filters);
-    }
-
-    /**
-     * @covers ModelCatalogCategory::getCategoryStores
-     * @todo   Implement testGetCategoryStores().
-     */
-    public function testGetCategoryStores() {
-        // Remove the following lines when you implement this test.
-        $category_id = 25;
-        $category_stores = $this->object->getCategoryStores($category_id);
-        $this->assertNotEmpty($category_stores);
-    }
-
-    /**
-     * @covers ModelCatalogCategory::getCategorySeoUrls
-     * @todo   Implement testGetCategorySeoUrls().
-     */
-    public function testGetCategorySeoUrls() {
-        // Remove the following lines when you implement this test.
-        $category_id = 25;
-        $category_seoURL = $this->object->getCategorySeoUrls($category_id);
-        $this->assertNotEmpty($category_seoURL);
-    }
-
-    /**
-     * @covers ModelCatalogCategory::getTotalCategories
-     * @todo   Implement testGetTotalCategories().
-     */
-    public function testGetTotalCategories() {
-        // Remove the following lines when you implement this test.
-        $total = $this->object->getTotalCategories();
-        $this->assertGreaterThan(0, count($total));
-    }
+  
 
 }
