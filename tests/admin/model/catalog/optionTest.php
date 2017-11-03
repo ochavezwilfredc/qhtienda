@@ -34,9 +34,13 @@ class ModelCatalogOptionTest extends TestCase {
      */
     public function testAddOption() {
         // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+         $data = [
+            "option_description" => "something",
+            "option_value" => 1,
+            "option_value_description" => null
+        ];
+        $option_id = $this->object->addOption($data);
+        $this->assertNotNull($this->$option_id);
     }
 
 
@@ -46,9 +50,23 @@ class ModelCatalogOptionTest extends TestCase {
      */
     public function testGetOptions() {
         // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        
+        $sort_data = [
+            "od.name" => "name",
+            "o.type" => "something_type",
+            "o.sort_order" => 1
+        ];
+        $data = [
+            "filter_name" => "name",
+            "filter_attribute_group_id" => 1,
+            "sort" => $sort_data,
+            "order" => "DESC",
+            "start" => -1,
+            "limit" => 0
+        ];
+
+        $options = $this->object->getOptions($data);
+        $this->AssertGreaterThan(0, count($options));
     }
 
    

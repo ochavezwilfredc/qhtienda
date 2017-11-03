@@ -1,4 +1,7 @@
 <?php
+
+require __DIR__ . "/../../../system/engine/model.php";
+
 class ModelCatalogFilter extends Model {
 	public function addFilter($data) {
 		$this->db->query("INSERT INTO `" . DB_PREFIX . "filter_group` SET sort_order = '" . (int)$data['sort_order'] . "'");

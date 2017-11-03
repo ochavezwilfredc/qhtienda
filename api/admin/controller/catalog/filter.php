@@ -1,4 +1,7 @@
 <?php
+
+
+
 class ControllerCatalogFilter extends Controller {
 	private $error = array();
 

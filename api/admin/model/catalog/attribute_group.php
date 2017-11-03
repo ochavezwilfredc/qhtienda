@@ -1,4 +1,7 @@
 <?php
+require __DIR__ . "/../../../system/engine/model.php";
+
+
 class ModelCatalogAttributeGroup extends Model {
 	public function addAttributeGroup($data) {
 		$this->db->query("INSERT INTO " . DB_PREFIX . "attribute_group SET sort_order = '" . (int)$data['sort_order'] . "'");
